@@ -17,8 +17,8 @@ module "gke" {
   project_id = var.project_id
   name     = "gke-knative-cluster"
   region   = var.region
-  network  = "default"
-  subnetwork = "default"
+  network  = "default_vntw"
+  subnetwork = "default_sntw"
 
   remove_default_node_pool = true
   initial_node_count       = 1
