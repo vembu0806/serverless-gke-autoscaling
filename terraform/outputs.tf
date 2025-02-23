@@ -1,15 +1,15 @@
 output "cluster_name" {
-  description = "The name of the GKE cluster"
+  description = "GKE cluster details"
   value       = google_container_cluster.gke_cluster.name
 }
 
 output "cluster_endpoint" {
-  description = "The endpoint of the GKE cluster"
+  description = "GKE cluster endpoint"
   value       = google_container_cluster.gke_cluster.endpoint
 }
 
 output "node_pool_name" {
-  description = "The name of the GKE node pool"
+  description = "GKE node pool name"
   value       = google_container_node_pool.primary_nodes.name
 }
 
