@@ -5,7 +5,7 @@ resource "kubernetes_horizontal_pod_autoscaler" "hpa" {
   }
 
   spec {
-    max_replicas = 10
+    max_replicas = 4
     min_replicas = 1
 
     scale_target_ref {
