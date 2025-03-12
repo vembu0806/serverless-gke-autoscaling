@@ -1,0 +1,15 @@
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: cloudrun-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: google.pubsub.messagePublished
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: cloudrun-service
